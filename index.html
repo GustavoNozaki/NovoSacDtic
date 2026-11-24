@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central de suporte de TI da Secretaria Municipal de Esportes: vídeos, manuais e contato com o DTIC.">
+  <title>SAC DTIC - SEME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logo-area">
+      <div class="logo">SEME</div>
+      <div>
+        <span class="logo-title">Secretaria Municipal de Esportes</span>
+        <span class="logo-subtitle">Central de Suporte DTIC</span>
+      </div>
+    </div>
+    <button type="button" class="header-button" id="openTicketTop">Abrir chamado</button>
+  </header>
+
+  <section class="hero">
+    <h1>Como podemos ajudar?</h1>
+    <p class="subtitle">Pesquise por assunto, sistema ou equipamento.</p>
+    <form class="search-box" role="search" id="searchForm">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="searchInput" placeholder="Ex.: impressora, e-mail, senha, internet..." aria-label="Pesquisar no SAC DTIC">
+      <button type="submit" class="primary-button">Buscar</button>
+    </form>
+  </section>
+
+  <div class="layout">
+
+    <!-- ESQUERDA: manuais -->
+    <aside class="sidebar sidebar-left" aria-labelledby="docsTitle">
+      <h2 id="docsTitle">Manuais</h2>
+      <ul class="documents">
+        <li>
+          <a href="#" class="document" data-document="Manual do Outlook">
+            <span class="document-icon" aria-hidden="true">📄</span>
+            <span><strong>Manual do Outlook</strong><small>Guia de utilização</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="Procedimento para habilitar MFA (6).pdf" class="document" data-document="Manual MFA" target="_blank" rel="noopener">
+            <span class="document-icon" aria-hidden="true">📄</span>
+            <span><strong>Manual MFA</strong><small>PDF - Procedimento de habilitação</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="document" data-document="Carteirinha de clubes">
+            <span class="document-icon" aria-hidden="true">📄</span>
+            <span><strong>Carteirinha de clubes</strong><small>Como emitir e usar</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="document" data-document="Manual de Impressoras">
+            <span class="document-icon" aria-hidden="true">📄</span>
+            <span><strong>Manual de Impressoras</strong><small>Orientações para impressão</small></span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CENTRO: vídeos -->
+    <main class="content">
+      <div class="section-heading">
+        <h2 id="videosTitle">Vídeos de orientação</h2>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+      </div>
+
+      <div class="cards" id="videoGrid">
+
+        <article class="card searchable" data-category="impressora" data-search="impressora impressão offline computador equipamentos">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">2 min</span></div>
+          <div class="card-content">
+            <span class="tag">Impressoras</span>
+            <h3>Como configurar uma impressora</h3>
+            <p>Configuração e verificação básica.</p>
+            <button type="button" class="watch-button" data-title="Como configurar uma impressora">Assistir vídeo</button>
+          </div>
+        </article>
+
+        <article class="card searchable" data-category="senha" data-search="senha acesso redefinir usuário">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">1 min</span></div>
+          <div class="card-content">
+            <span class="tag">Acesso</span>
+            <h3>Redefinição de senha</h3>
+            <p>O que fazer em problemas com a senha.</p>
+            <button type="button" class="watch-button" data-title="Redefinição de senha">Assistir vídeo</button>
+          </div>
+        </article>
+
+        <article class="card searchable" data-category="senha sistemas" data-search="mfa autenticação dois fatores segurança senha">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">3 min</span></div>
+          <div class="card-content">
+            <span class="tag">Segurança</span>
+            <h3>Configuração do MFA</h3>
+            <p>Passo a passo da autenticação multifator.</p>
+            <button type="button" class="watch-button" data-title="Procedimento para habilitar MFA" data-pdf="Procedimento para habilitar MFA (6).pdf">Abrir manual PDF</button>
+          </div>
+        </article>
+
+        <article class="card searchable" data-category="email" data-search="outlook email e-mail correio eletrônico">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">2 min</span></div>
+          <div class="card-content">
+            <span class="tag">E-mail</span>
+            <h3>Orientações sobre o e-mail</h3>
+            <p>Configurações e dicas do e-mail institucional.</p>
+            <button type="button" class="watch-button" data-title="Orientações sobre o e-mail">Assistir vídeo</button>
+          </div>
+        </article>
+
+        <article class="card searchable" data-category="sistemas internet" data-search="sistemas acesso sistema institucional internet">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">4 min</span></div>
+          <div class="card-content">
+            <span class="tag">Sistemas</span>
+            <h3>Acesso aos sistemas</h3>
+            <p>Como acessar e utilizar os sistemas.</p>
+            <button type="button" class="watch-button" data-title="Acesso aos sistemas">Assistir vídeo</button>
+          </div>
+        </article>
+
+        <article class="card searchable" data-category="telefone equipamentos" data-search="telefone telefonia ramal aparelho">
+          <div class="video-thumb"><span class="play" aria-hidden="true">▶</span><span class="duration">2 min</span></div>
+          <div class="card-content">
+            <span class="tag">Telefonia</span>
+            <h3>Problemas com telefone</h3>
+            <p>Verificações iniciais para ramais.</p>
+            <button type="button" class="watch-button" data-title="Problemas com telefone">Assistir vídeo</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div id="noResults" class="no-results" hidden aria-live="polite">
+        <strong>Nenhum conteúdo encontrado.</strong>
+        <p>Tente outro termo ou fale com o DTIC.</p>
+      </div>
+
+      <section class="support" aria-labelledby="supportTitle">
+        <div>
+          <h2 id="supportTitle">Não encontrou a solução?</h2>
+          <p>Se os conteúdos não ajudaram, entre em contato com o DTIC.</p>
+        </div>
+        <div class="support-actions">
+          <button type="button" class="primary-button on-dark" id="openTicket">Abrir chamado</button>
+          <button type="button" class="secondary-button" id="contactDtic">Contatar DTIC</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- DIREITA: categorias -->
+    <aside class="sidebar sidebar-right" aria-labelledby="catTitle">
+      <h2 id="catTitle">Categorias</h2>
+      <div class="categories">
+        <button type="button" class="category active" data-category="todas"><span aria-hidden="true">📚</span> Todas</button>
+        <button type="button" class="category" data-category="impressora"><span aria-hidden="true">🖨️</span> Impressoras</button>
+        <button type="button" class="category" data-category="email"><span aria-hidden="true">📧</span> E-mail</button>
+        <button type="button" class="category" data-category="computador"><span aria-hidden="true">💻</span> Computadores</button>
+        <button type="button" class="category" data-category="internet"><span aria-hidden="true">🌐</span> Internet</button>
+        <button type="button" class="category" data-category="sistemas"><span aria-hidden="true">🔐</span> Sistemas</button>
+        <button type="button" class="category" data-category="telefone"><span aria-hidden="true">📞</span> Telefonia</button>
+        <button type="button" class="category" data-category="senha"><span aria-hidden="true">👤</span> Senhas</button>
+        <button type="button" class="category" data-category="equipamentos"><span aria-hidden="true">🖥️</span> Equipamentos</button>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p>SAC DTIC • Secretaria Municipal de Esportes</p>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" class="close-modal" id="closeModal" aria-label="Fechar">×</button>
+      <div class="modal-play" aria-hidden="true">▶</div>
+      <h2 id="modalTitle">Vídeo</h2>
+      <p>Espaço reservado para o vídeo real do DTIC. Substitua este conteúdo pelo link ou vídeo institucional.</p>
+      <button type="button" class="primary-button" id="closeModalButton">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
